@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>costum properties == css placeholders</title>
+    <style>
+        :root{
+            /* root scope */
+            /* any variable here can used everywhere */
+            --primary : steelblue;
+            --secondary : skyblue;
+            --max-width: 960px ;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+            background: var(--color-blue);
+        }
+        h3 {
+            /* placeholder valide for the scope h3 and her childs */
+            color: var(--color-blue);
+            --color-blue: #04f0f0;
+        }
+        
+        header {
+            background: var(--primary);
+            color: #fff;
+            text-align: center;
+            color: #fff;
+            border-bottom: 5px var(--secondary) solid;
+        }
+        .container {
+            max-width: var(--max-width);
+            display: flex;
+            margin: auto;
+        }
+        .box {
+            background: var(--primary);
+            border-bottom: 5px var(--secondary) solid;
+            color: wheat;
+            padding: 1rem;
+            margin : 1rem;
+            --box1 : 1;
+            --box2 : 2;
+        }
+        .box1{
+            flex: var(--box1);
+        }
+        .box2{
+            flex: var(--box2);
+        }
+        
+        </style>
+</head>
+<body>
+    <header>
+        <h1>CsS vArS</h1>
+    </header>
+    <div class="container">
+        <div class="box box1">
+            <h3> HHHHHHHHHH </h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, error!</p>
+        </div>
+        <div class="box box2">
+            <h3> HHHHHHHHHH </h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, error!</p>
+        </div>
+    </div>
+</body>
+</html>
