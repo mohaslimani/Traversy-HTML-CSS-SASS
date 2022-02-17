@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRansform</title>
+    <style>
+        body{
+            background: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box {
+            background: white;
+            width: 300px;
+            height: 300px;
+            margin: 1rem;
+        }
+        .box1 {
+            background: red;
+            transform: rotate(25deg);
+        }
+        .box2 {
+            background: blue;
+            /* انحراف */
+            transform: skew(-15deg);
+        }
+        .box3 {
+            background: green;
+            transform: scale(0.5);
+        }
+        .box4 {
+            background: black;
+            transition: all 1s ease-in-out;
+        }
+        .box4:hover {
+            /* overwriting */
+            transform: rotate(360deg);
+            transform: scale(0.5);
+            transform: skew(60deg);
+            transform: translate(-1000px, -50px);
+            transform: translate3d(-1000px, -50px, 1000px);
+        }
+        /* multiple transforms */
+        .box5 {
+            background: white;
+            transition: all 1s ease-in-out;
+        }
+        .box5:hover{
+            transform: rotate(360deg) scale(0.2) translate(-1500px, -1000px);
+        }
+        /* transform order */
+        .box6 {
+            background: skyblue;
+            transition: all 1s ease-in-out;
+        }
+        .box6:hover{
+            transform: scale(0.2) translate(-1500px, -1000px) rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+</body>
+</html>
