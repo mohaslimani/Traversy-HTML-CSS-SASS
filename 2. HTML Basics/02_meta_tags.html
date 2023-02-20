@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<!-- lang="en" defines the page language as english -->
+	<!-- helps search engines to identify the language of text content -->
+	<!-- also helps screen readers to identify the pronunciation and accent -->
+	<!--
+		global = can be used in any other element
+		other global attributs :
+		accesskey, title, class, id, contenteditable, dir, draggable, spellsheck style, translate, data ... 
+	-->
+
+<head>
+	<meta charset="UTF-8">
+	<!-- charset="" the character encoding for the html document -->
+	<!-- UTF-8 set defines more than 10 000 characters to use -->
+	<!-- exist others ( ISO-8859(255char), ANSI(255by windows), ASCII(128character) ) -->
+
+	<!-- http-equive : http header for the (content) ex:content-type, content-security-policy, default-style -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- compatibilty in IE browser -->
+	<meta http-equiv="refresh" content="10"><!-- refrech the doc every 10sec -->
+
+	<!--
+		name : the name of the metadata
+		content : the content of that data
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- delete and see the difference -->
+	<!-- the viewport gives the browser infos abt dimentions and scaling -->
+	<!-- width = device-width : follow the screen width of the device -->
+	<!-- initial-scale = 1.0  : initial zoom level -->
+
+	<meta name="keywords" content="bla bla, bla"> <!-- help the search engines -->
+	<meta name="description" content="this is just the begining">
+	<meta name="robots" content="NOINDEX, NOFOLLOW"><!-- this line means do not index/show my page in search engines-->
+	<!-- name (description, author, application-name, generator) -->
+
+	<title>meta tags</title><!-- see below -->
+</head>
+<body>
+	<h1>meta shit</h1>
+	<h2> i am refreching every 10 seconds </h2>
+	<img src="meta.png" alt="blach">
+	<p>as u can see "FUZE :MIAMI ...." is the title in the document</p>
+	<img src="title.png" alt="">
+	<p>"FUZE is a full service MIAMI ...." is the description inside the meta data</p>
+	<img src="description.png" alt="">
+	<p>The type of metadata provided by the <code>&lt;meta&gt;</code> element can be one of the following:</p>
+	<ul>
+		<li>If the <a href="/en-US/docs/Web/HTML/Element/meta#attr-name" aria-current="page"><code>name</code></a> attribute is set, the <code>&lt;meta&gt;</code> element provides <em>document-level metadata</em>, applying to the whole page.</li>
+		<li>If the <a href="/en-US/docs/Web/HTML/Element/meta#attr-http-equiv" aria-current="page"><code>http-equiv</code></a> attribute is set, the <code>&lt;meta&gt;</code> element is a <em>pragma directive</em>, providing information equivalent to what can be given by a similarly-named HTTP header.</li>
+		<li>If the <a href="/en-US/docs/Web/HTML/Element/meta#attr-charset" aria-current="page"><code>charset</code></a> attribute is set, the <code>&lt;meta&gt;</code> element is a <em>charset declaration</em>, giving the character encoding in which the document is encoded.</li>
+		<li>If the <a href="/en-US/docs/Web/HTML/Global_attributes/itemprop"><code>itemprop</code></a> attribute is set, the <code>&lt;meta&gt;</code> element provides <em>user-defined metadata</em>.</li>
+	</ul>
+</body>
+</html>

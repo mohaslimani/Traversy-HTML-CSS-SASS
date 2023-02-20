@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Forms & Input</title>
+</head>
+<!-- input tag -->
+<!--
+	input attributes :
+	type="text, email, number, date, radio, checkbox, submit"
+	name="firstName" //firstName is the name of the variable submitted in the server side
+	shortcut // (input:email(type) will put the all the requirements of an email input tag)
+	value="" //can be a default answer for the <input>
+	//can be the only one option value submitted to the name="" (<option> (select) or the <radio>) 
+	//or multiple if the case of checkboxes
+	//of the text in Submit_button
+
+	checked ::: auto check the option given by input checkbox(multiple)/radio
+	placeholder="" :: is simply a placeholder(hint)
+
+-->
+<body>
+
+	<!-- this form will be submitted to (process.php) -->
+	<form action="process.php">
+
+		<!-- "div" stands for division -->
+		<!-- Text -->
+		<div>
+			<!-- <label> tag defines a label for an element (input, select, textarea, progress, meter ...) -->
+			<!--
+				"label" has two possible attributs
+				for="id_of_element_to_bind_with", if u click on the label, the input will be triggered
+				this will also happen if the <input> element is inside the <label> tag
+				form="" specifies which form the label belongs to
+			-->
+			<label for="firstName">First Name</label><br>
+			<input type="text" id="firstName" name="firstName" value="John">
+			<br>
+
+			<label for="lastName">Last Name<br>
+				<input type="text" id="lastName" name="lastName" value="Doe">
+			</label>
+		</div>
+
+		<!-- Email -->
+		<div>
+			<label for="email">Email</label><br>
+			<input type="email" name="email" id="email" placeholder="Enter an email">
+		</div>
+
+		<!-- Textarea -->
+		<!-- multiline plain text input -->
+		<!-- here u can decide the number of columns(char) and rows(lines) as a holder for the input wanted -->
+		<div>
+			<label for="message">Message</label><br>
+			<textarea name="message" id="message" cols="50" rows="5"></textarea>
+		</div>
+
+		<!-- Select -->
+		<!-- select only one <option> tag from the list -->
+		<!-- selected indicate the option as auto selected -->
+		<div>
+			<label for="sex">Sex</label>
+			<select name="sex" id="sex">
+				<option value="male">Male</option>
+				<option value="female" selected>Female</option>
+				<option value="other">Other</option>
+			</select>
+		</div>
+
+		<!-- Number -->
+		<div>
+			<label for="age">Age</label><br>
+			<input type="number" name="age" id="age">
+		</div>
+
+		<!-- Date -->
+		<div>
+			<label for="bithdate">Birthdate</label><br>
+			<input type="date" name="birthdate" id="birthdate">
+		</div>
+
+		<!-- Radio one option-->
+		<div>
+			<label for="membership">Membership</label>
+			<input type="radio" name="membership" value="simple" id="membership"> Simple
+			<input type="radio" name="membership" value="standard" id="membership" checked> Standard
+			<input type="radio" name="membership" value="super" id="membership"> Super
+		</div>
+
+		<!-- Checkbox multiple options-->
+		<div>
+		<label for="Like">I Like..</label>
+			<input type="checkbox" name="likes1" value="bike" id="likes1"> Bike
+			<input type="checkbox" name="likes2" value="car" id="likes2" checked> Car
+			<input type="checkbox" name="likes3" value="boat" id="likes3" checked> Boat
+		</div>
+
+		<!-- Input submit -->
+		<input type="submit" value="Submit">
+		<!-- Button submit u can use this instead of the submit_input-->
+		<!-- <button type="submit">Submit</button> --> 
+		<!-- the reset button works perfectly fine to reset the inputs -->
+		<button type="reset">Reset</button>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>links, images, unsplash</title>
+</head>
+<body>
+	<!-- quick note : there are 
+		"inline elements" (<a> tag dont add a new line) 
+		and "block elements" (<p> tag add a new line) -->
+
+	<!-- External links -->
+	<p>
+		<a href="https://google.com">go to google</a>
+	</p>
+	<p>
+		<!--
+			target=""
+			_blank : new tab
+			_self : same tab (default)
+			_parent : parent frame
+			_top : full body of the window
+			framename : in the named iframe
+		-->
+		<!-- a without href is a place holder for a hyperlink-->
+		<a href="https://google.com" target="_blank">go to google in a new tab</a>
+	</p>
+
+	<!-- Internal links -->
+	<p>
+		<a href="/03_typography.html">go to typography_offline</a>
+	</p>
+	<p>
+		<a href="/02_meta_tags.html" target="_blank">meta in a new tab</a>
+	</p>
+
+	<!-- local image -->
+	<!-- remote image unsplash -->
+	<!-- the width opt doesnt considired as a best practice -->
+	<!-- alt="text" the alternate text if the image does not exist -->
+	<!-- https://source.unsplash.com/(u can decide the resolution)/?(term to search for)-->
+	<p>
+		<img src="/images/oo.jpg" alt="local one" width="500">
+		<img src="https://source.unsplash.com/200x600/?pretty" alt="from unsplash">
+		<!-- note :: notice how the image is placing next to each others -->
+	</p>
+
+</body>
+</html>

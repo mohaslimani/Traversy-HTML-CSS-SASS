@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Div, span, id and class</title>
+	<style>
+	.card {
+		border: 1px solid #ccc;
+		background: #f4f4f4;
+		padding: 20px;
+		margin-bottom: 10px;
+	}
+	.enhance {
+		color: yellow;
+		background-color:black;
+	}
+	#pp {
+		background-color: greenyellow;
+	}
+	</style>
+</head>
+
+<body>
+
+	<!-- shortcuts ::: h1#num(enter) ::: create h1 element with "num" as id -->
+	<!-- 		   ::: #num(enter)   ::: create div element with "num" as id-->
+	<!-- shortcuts ::: h1.num(enter) ::: create h1 element with "num" as class -->
+	<!-- 		   ::: .num(enter)   ::: create div element with "num" as class-->
+	
+
+	<!-- id and class are the same -->
+	<!-- 
+		the best practice is to use:
+		id		: for only one element, the same element cannot have 2 ids (see main-nav and pp)
+		.class	: multiple elements, the same element can have multiple classes (see main-header)
+	-->
+
+	<div id="main-header" class="card enhance">
+		<h1>My Website</h1>
+		<p>A site about me</p>
+	</div>
+	<ul id="main-nav pp"> <!-- pp here is not working -->
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<div id="about" class="card">
+		<h3>About</h3>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+			Impedit <span class="enhance">expedita quae, molestias magnam recusandae ducimus</span> 
+			dolore itaque sit dolores error qui repudiandae aliquam nam? 
+			Ad, <div class="enhance"> tempore amet voluptate </div> enim itaque minima quasi quae 
+			esse quis incidunt sint provident sapiente aspernatur!
+		</p>
+	</div>
+
+	<div id="contact" class="card">
+		<h3>Contact Me</h3>
+		<ul>
+		<li>Address: 50 Main st, Boston MA</li>
+		<li>Phone: (555) 555-5555</li>
+		<li>Email: me@somethingcool.com</li>
+		</ul>
+	</div>
+
+	<div id="footer">
+		<p>Copyright &copy; 2019</p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tables</title>
+	<style>
+		table, th, td 
+		{
+			border: 1px solid black;
+			border-collapse: collapse; /* collapse the borders(cells) with each-others */
+		}
+		th, td 
+		{
+			padding: 15px;
+		}
+		th
+		{
+			text-align: left;
+		}
+		table
+		{
+			border-spacing: 5px;
+		}
+		#cssLharba tr:nth-child(even)
+		{
+			background-color: gray;
+		}
+		#cssLharba tr:nth-child(odd)
+		{
+			background-color: whitesmoke;
+		}
+		#cssLharba th
+		{
+			background-color: black;
+			color: blanchedalmond;
+		}
+		caption
+		{
+			font-size: 30px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<h1> Tables </h1>
+	<!-- tables were used to arrange internet pages before CSS,FLEXBOX,GRID -->
+	<!-- now the are considired as a deprecated property -->
+
+	<table id="cssLharba">
+
+		<caption> i am a fucking loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong caption </caption>
+		
+		<!-- table HEADER -->
+		<thead>
+			<!-- table ROW -->
+			<tr>
+				<!-- th : HEADER CELL (bolded)-->
+				<th>Table header &lt; thead &gt; </th>
+				<th>Tag</th>
+				<th>Description 1</th>
+				<th>Description 2</th>
+		  	</tr>
+		</thead>
+
+		<!-- table BODY -->
+		<tbody>
+			<!-- tr : table ROW -->
+			<tr>
+				<!-- td : table CELL -->
+				<td>Table body &lt; tbody &gt;</td>
+				<td>&lt; table &gt;</td>
+				<td>Defines a table</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>  &lt; th &gt; </td>
+				<td>Defines a header cell in a table</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td> &lt; tr &gt; </td>
+				<td>Defines a row in a table</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td> &lt; td &gt; </td>
+				<td>Defines a cell in a table</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td> &lt; caption &gt; </td>
+				<td>Defines a table caption </td>
+				<td>inserted directly after the &lt; table &gt; </td>
+			</tr>
+
+			<!-- colspan : span a cell (col) -->
+			<tr>
+				<td></td>
+				<td> &lt; colspan &gt; </td>
+				<td colspan="2">Delete a &lt; td &gt; tag from "THIS ROW" and put colspan="2 </td>
+			</tr>
+
+			<!-- rowspan : span a cell (row) -->
+			<tr>
+				<td></td>
+				<td> &lt; rowspan &gt; </td>
+				<td rowspan="2">Delete a &lt; td &gt; tag from the "NEXT ROW" and put rowspan="2</td>
+				<td></td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>empty</td>
+				<td>empty</td>
+			</tr>
+
+		</tbody>
+
+		<!-- table footer -->
+		<!-- anything aoutside the format will jump to the top of the page -->
+		<tfoot>
+			<tr>
+				<td>
+					table footer
+					&lt; tfoot &gt;
+				</td>
+				<td>
+					am i a useless option ?
+				</td>
+				<td>
+					YES
+				</td>
+			</tr>
+		</tfoot>
+	  </table>
+</body>
+</html>

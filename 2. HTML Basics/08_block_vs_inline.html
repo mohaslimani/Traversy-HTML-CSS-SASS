@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>blocks vs inlines</title>
+	<style>
+		#div1
+		{
+			border: 2px green solid;
+		}
+		a, span, strong
+		{
+			border: 2px red solid;
+		}
+	</style>
+</head>
+<body>
+
+	<h2> There are two display values: block and inline </h2>
+
+	<ul>
+
+		<li>A block-level element always starts on a new line and takes up the full width available</li>
+
+		<div id="div1">div is a block element</div>
+		<div id="div1"> blocks always starts on a new line. </div>
+
+		<li> A block level element has a top and a bottom margin, whereas an inline element does not. </li>
+		
+		<li>An inline element does not start on a new line and it only takes up as much width as necessary</li>
+		<a href="#">"a" is an inline element</a>
+		<a href="#">"a" is an inline element</a>
+		<div> Note: <span>An inline element</span> cannot contain a block-level element! </div>
+		
+		<li> also we have something called <strong>inline-block</strong> but we need css to understand them </li>
+
+	</ul>
+
+	<h2> divs and spans </h2>
+	<ul>
+		<li>
+			<h3> &lt;div&gt; is the default block element </h3> 
+			has no special meaning at all.(used for division) <br>
+			It represents its children. <br>
+			It can be used with the class and ids (css styling)
+		</li> <br>
+		<li>
+			<h3> &lt;span&gt; is the default inline element </h3>
+			The span element doesn't mean anything on its own, <br>
+			but can be useful when used together with the global attributes class and ids <br>
+			It represents its children.
+		</li> <br>
+	</ul>
+	<div id="div1">
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+			Non molestiae ratione impedit fuga laborum distinctio, <br>
+			delectus <span>voluptate est</span> ad mollitia incidunt pariatur provident minus <br>
+		</p>
+		<p>
+			ullam enim excepturi consequatur ipsum tempore! Facere adipisci ut enim, <br>
+			maiores id magni debitis eaque in!
+		</p>
+	</div>
+</body>
+</html>
+
