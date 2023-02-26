@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign Up !!</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0px;
+			margin: 0px;
+			font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		body {
+			background-color: rgb(86, 67, 255);
+		}
+		
+		#container {
+			background-color: white;
+			max-width : 440px;
+			margin: auto;
+			margin-top: 2.4em;
+			padding : 2.2em 1.3em;
+			padding-bottom: 1em ;
+		}
+		
+		#container h1 ,#container p{
+			text-align: center;
+			margin: 1em;
+			margin-top: 0em;
+		}
+		
+		.bottom-text {
+			font-size: 14px;
+			margin-bottom: 0px;
+		}
+
+		.form_style label {
+			display: block;
+			margin: 0px auto;
+			width: 90%;
+			font-size: 20px;
+			color: gray;
+		}
+
+		.form_style input {
+			display: block;
+			width: 90%;
+			font-size: 18px;
+			height: 2.5em;
+			margin: auto;
+			border: solid 1px black;
+			border-radius: 10px;
+			margin-bottom: 1.5em;
+		}
+		button {
+			float: left;
+			width: 50%;
+			height: 40px;
+			margin-bottom: 30px;
+			background-color: khaki;
+			cursor: pointer;
+		}
+
+		footer {
+			text-align: center;
+			margin-top : 10px;
+			color: honeydew;
+		}
+		footer a {
+			color : khaki;
+		}
+
+		button:hover {
+			background-color: #30f662;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="container">
+		<h1>Sign Up !</h1>
+		<p>it a free real estate !</p>
+		<form action="chi7aja.js">
+
+			<div class="form_style">
+				<label for="firstName">First Name</label>
+				<input type="text" name="first_name" id="firstName">
+			</div>
+
+			<div class="form_style">
+				<label for="lName">Last name</label>
+				<input type="text" name="l_name" id="lName">
+			</div>
+
+			<div class="form_style">
+				<label for="EmailIn">Email</label>
+				<input type="Email" name="email" id="EmailIn">
+			</div>
+
+			<div class="form_style">
+				<label for="pass">Password</label>
+				<input type="password" name="pass" id="pass">
+			</div>
+
+			<div class="form_style">
+				<label for="pass2">Confirm Password</label>
+				<input type="password" name="pass2" id="pass2">
+			</div>
+
+			<button type="submit" class="btn"> sign up </button>
+			<button type="reset" class="btn"> reset </button>
+
+			<p class="bottom-text">
+				By clicking the Sign Up button, you agree to our
+				<a href="#">Terms & Conditions</a> and
+				<a href="#">Privacy Policy</a>
+			</p>
+			
+		</form>
+
+	</div>
+	<footer>
+		alreadu have an account ? <a href="#">login here</a>
+	</footer>
+</body>
+</html>

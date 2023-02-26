@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Navigation Menus</title>
+	<style>
+		body {
+			font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		.top-nav-bar {
+			border-radius: 10px;
+			background-color: #4c6ca0;
+			/* control wheather to clip the content or add scrollbars when the content is too big to fit in an area */
+			overflow: auto;
+		}
+
+		.top-nav-bar li {
+			/* we removed the padding from here and add it to <a> element so we can hover on <a> not on <li> */
+			padding: 0;
+			list-style: none;
+			/* the float:left in <li> element removes the background from the .top-nav-bar we fix it by overflow:auto */
+			float: left;
+		}
+		
+		.top-nav-bar li a {
+			/* <a> by default has no padding or margin so we transform it from inline to block elemnt  */
+			display : block;
+			color: cornsilk;
+			font-size: 20px;
+			text-decoration: none;
+			padding: 15px 30px;
+		}
+
+		.top-nav-bar li a:hover {
+			color: #a4a4a4;
+			background-color: #446190;
+		}
+
+		/* side menu */
+		.side-nav {
+			border: black 1px solid;
+			border-radius: 10px;
+			width: 200px;
+			line-height: 2.4em;
+			font-size: 18px;
+		}
+		
+		.side-nav li {
+			list-style: none;
+			padding: 20px;
+			border-bottom: dotted black 1px;
+		}
+		
+		.side-nav li a {
+			text-decoration: none;
+			color: #333;
+		}
+
+		.side-nav li:last-child {
+			border: none;
+		}
+
+		.side-nav li a:hover {
+			color: chocolate;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<ul class="top-nav-bar">
+			<li><a href="#"> Home </a></li>
+			<li><a href="#"> About </a></li>
+			<li><a href="#"> Service </a></li>
+			<li><a href="#"> Contact </a></li>
+			<li><a href="#"> Copyright </a></li>
+			<li><a href="#"> Others </a></li>
+		</ul>
+	</div>
+
+	<div style="clear: both;"> </div>
+	
+	<div>
+		<ul class="side-nav">
+			<li><a href="#"> Home </a></li>
+			<li><a href="#"> About </a></li>
+			<li><a href="#"> Service </a></li>
+			<li><a href="#"> Contact </a></li>
+			<li><a href="#"> Copyright </a></li>
+			<li><a href="#"> Others </a></li>
+		</ul>
+	</div>
+</body>
+</html>

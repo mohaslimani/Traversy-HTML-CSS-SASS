@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Inline, block, inline-block </title>
+	<style>
+		h2 {
+			text-align: center;
+		}
+
+		img {
+			border: black 5px solid;
+		}
+
+		p {
+			text-align: center;
+			font-size: 20px;
+		}
+
+		.box-block {
+			display: block;
+			background: gray;
+			padding: 20px;
+			margin: 20px auto;
+			width: 50%;
+		}
+
+		.box-inline ul {
+			display: block;
+			max-width: 960px;
+			margin: auto;
+		}
+
+		.box-inline li {
+			display: inline;
+			background: gray;
+			color: honeydew;
+			padding: 0px;
+			margin: 20px;
+		}
+
+		.box-inline-block {
+			width: 24%;
+			display: inline-block;
+			box-sizing: border-box;
+			background: #a0a0a0;
+			padding: 20px;
+			margin-bottom: 15px;
+    	}
+
+	</style>
+</head>
+<body>
+	<div>
+		<h2> Inline & block </h2>
+		<ul style="font-size: 20px;">
+			<p> we described before what is an inline and block </p>
+			<li> an inline is an element without any margin, border, padding and we cant fixat its width (because the width is a part of the padding).</li>
+			<li> a block have all those properties. </li>
+			<li> inlines are displayed one by one at the same line until we run-out the width of the window. (arranged from left to right)</li>
+			<li> blocks take by default the width of the window as their width and start always from the beginning of the line (arranged from top to bottom) </li>
+			<li> the most important shit here, u can change an element from being a block to inline and vise-versa (display) </li>
+		</ul>
+	</div>
+	
+	<div>
+		<h2> display : Block </h2>
+		<div class="box-block">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure in fugiat laudantium officia aliquam ex? Sint sit quibusdam quas!</p>
+		</div>
+		<div class="box-block">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure in fugiat laudantium officia aliquam ex? Sint sit quibusdam quas!</p>
+		</div>
+		<div class="box-block">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure in fugiat laudantium officia aliquam ex? Sint sit quibusdam quas!</p>
+		</div>
+	</div>
+
+	<div class="box-inline">
+		<h2> display : inline </h2>
+		<p>
+			this padding shit is working because we dont have block element inside our &lt;li&gt; inline element. but still the width will not work.
+			<br>
+			also as u see the bullets (list-style) and the default padding of li elements both disapeared. 
+			<br>
+			also u cannot center inline Element using the "margin : auto" proprety.
+			<br>
+			finally ,the main problem here centering &lt;li&gt; inline using &lt;lu&gt; block elements, that when u make the width of the window less than 960px the &lt;li&gt; will go to the next line (like the floating shit) see below.
+			<img src="./img/inline_min_h.png" alt="inline_pos">
+		</p>
+		<br>
+		<ul>
+			<li> inline_01 </li>
+			<li> inline_02 </li>
+			<li> inline_03 </li>
+			<li> inline_04 </li>
+			<li> inline_05 </li>
+			<li> inline_06 </li>
+		</ul>
+	</div>
+
+	<div style="margin: auto; width: 90%;">
+		<h2>display: inline-block</h2>
+		<div class="box-inline-block">
+			<h3>Heading</h3>
+			<p>the inline-block property takes the best of both, the horizontal lining from (inline), and the possibility to use the width.</p>
+		</div>
+		<div class="box-inline-block">
+			<h3>Heading</h3>
+			<p> as  can see the inline-block is affecting the &lt;h2&gt; and the &lt;p&gt;</p>
+		</div>
+		<div class="box-inline-block">
+			<h3>Heading</h3>
+			<p>all of inline-block elements have different heights bc we didnt fix it but they are placing at the bottom of the div parent element</p>
+		</div>
+		<div class="box-inline-block">
+			<h3>Heading</h3>
+			<p> box-sizing: border-box; allow us to include the padding and border to the width and height of the element, wich makes is eisier to adjust our floating elements </p>
+		</div>
+		
+	</div>
+</body>
+</html>

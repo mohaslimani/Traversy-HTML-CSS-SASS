@@ -1,0 +1,66 @@
+/* about-info section */
+#about-info {
+	height: fit-content;	
+	text-align: center;
+	/* more responsive ? */
+	/* if the height is too short for the content then hide the content dont display it over the next element */
+	overflow: hidden;
+}
+
+#about-info .leftDiv {
+	float: left;
+	width: 50%;
+	min-height: 100%;
+}
+
+#about-info .rightDiv {
+	float: right;
+	width: 50%;
+	min-height: 100%;
+	margin-top: 20%;
+}
+
+/* about-info img */
+#about-info .rightDiv img {
+	display: block;
+	width: 50%;
+	margin: auto;
+	border-radius: 30%;
+}
+
+/* testimonials section */
+#testimonials {
+	background: url(../img/back01.jpg) center center/cover no-repeat;
+	min-height: 600px;
+	padding-top: 100px;
+}
+
+#testimonials h1 {
+	text-align: center;
+	padding-bottom: 40px;
+}
+
+#testimonials h3 {
+	padding-bottom: 0px;
+}
+
+#testimonials .test {
+	border-radius: 10px;
+	margin-bottom: 40px;
+	padding: 20px;
+	opacity: 0.8;
+	padding-top : 5px;
+}
+
+#testimonials p {
+	margin-bottom: 20px;
+}
+
+#testimonials img {
+	width: 10%;
+	height: 95px;
+	float: left;
+	margin-right: 2%;
+	border-radius: 50%;
+	object-fit: cover;
+}

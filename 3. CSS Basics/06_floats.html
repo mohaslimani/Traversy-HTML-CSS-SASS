@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Floats</title>
+	<style>
+
+		h2 {
+			color: brown;
+		}
+
+		.container {
+			/* width: 960px; */
+			max-width: 960px;
+			margin: 50px auto;
+		}
+
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			/* the space before lines is (1.4 x line-height(px)) of its respective parent(html) */
+			line-height: 1.4em;
+		}
+
+		.box {
+			background: #f4f4f4;
+			border: 1px solid #333;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		#box3 {
+			float: left;
+		}
+		#box4 {
+			float: right;
+		}
+
+		#box-2 {
+			float: left;
+			width: 68%;
+			box-sizing: border-box;
+    	}
+    	#box-3 {
+			float: right;
+			width: 30%;
+			box-sizing: border-box;
+    	}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<div id="box1" class="box">
+			<h2> .container </h2>
+			<p>
+				<p>
+					we put everything inside a div.container element
+				</p>
+				<li> fix its max-width </li>
+				<li> and put its margin to auto </li>
+				<p>
+					so we can center our page.
+				</p>
+				<li> also if u change the max-width property with width it wont work, the image is centered but its width is fixed even if the window is small so the rest of the page(container) will be hidden. </li>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nemo praesentium fugiat quia neque iure aut, delectus hic blanditiis nesciunt eius odit voluptatem esse laboriosam ipsa facere eveniet autem quam?
+				</p>
+			</p>
+		</div>
+	
+		<div id="box2" class="box">
+			<h2> text-align </h2>
+			<p>
+				as u can see here :
+				<ul>
+					<li style="text-align: center;">center</li>
+					<li style="text-align: left">left</li>
+					<li style="text-align: right;">right</li>
+					<li style="text-align: justify;"> justify : stretches the lines so that each line has equal width (see below), another way to say this justify changes the width of spaces between the words. </li>
+				</ul>
+				<p style="text-align: justify;">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur corporis quidem illum quisquam perferendis maiores recusandae dignissimos error hic, velit reiciendis autem nobis ullam eos officia explicabo est porro eum ducimus sint vitae totam unde excepturi. Vitae a qui fugit culpa natus sit laudantium voluptatem. Tempore culpa voluptatem, id vitae hic repellat eius. Atque quidem nulla dolorum accusantium! Dolorem deserunt repellendus exercitationem vel quisquam accusantium excepturi suscipit tempore qui ea maxime, ratione quae commodi tenetur ex temporibus provident sed sit?
+				</p>
+			</p>
+		</div>
+	
+		<div id="box0" class="box">
+			<h2> float </h2>
+			<h2>part 1</h2>
+			<p>
+				those are two successive divs (left/right) nested inside this div <br>
+				they are floating : 
+			</p>
+			<ol>
+				<li> after the Margin of the &lt;ol&gt; Element</li>
+				<li> at the same time the end of div#box0 content(size) </li>
+				<li> so the floating element float in top of the marging and padding of the div#box0 element </li>
+				<li> and do not give a daaaaamn fuck about its comming elements as it floating outside this div and inside the NeXt div </li>
+			</ol>
+			<div id="box3" class="box">
+				<h4> float : left (inside)</h4>
+			</div>
+			<div id="box4" class="box">
+				<h4> float : right (inside)</h4>
+			</div>	
+		</div>
+
+		<div id="box3" class="box">
+			<h4> float : left </h4>
+		</div>
+		<div id="box4" class="box">
+			<h4> float : right </h4>
+		</div>
+		<div class="box">
+			also, as u can see here floating is a fucking mess.
+		</div>
+
+		<div class="box">
+			<h2> part 2 : width + box-sizing: border-box;</h2>
+			we will make this less chaotic if we fixed the widths of the floating elements <br> and at the same time put box-sizing: border-box; property inside our floating boxes <br> as it Specifies the behavior of the 'width' and 'height'.
+			<br> box-sizing: border-box; without this line the floating (70%, 30%) wont fit bc the padding adds to the width of divs
+		</div>
+
+		<div id="box-2" class="box">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolor, soluta esse voluptas aliquam eligendi veritatis illo impedit minus unde.</p>
+		</div>
+		<div id="box-3" class="box">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolor, soluta esse voluptas aliquam eligendi veritatis illo impedit minus unde.</p>
+		</div>
+		<div id="box-4" class="box">
+			<h3>Heading</h3>
+			<p> but still those are separate divs but the floating element float onto this div element so we need to clear our prperties BEFORE adding new elements.</p>
+		</div>
+
+		<div class="box"> 
+			<h2> part 3 : clear </h2>
+			<p> this what will happen if we put &lt;div style="clear: both;"&gt;&lt;/div&gt; after the floating elements. </p> 
+		</div>
+
+		<div id="box-2" class="box">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolor, soluta esse voluptas aliquam eligendi veritatis illo impedit minus unde.</p>
+		</div>
+		<div id="box-3" class="box">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolor, soluta esse voluptas aliquam eligendi veritatis illo impedit minus unde.</p>
+		</div>
+	  
+		<div style="clear: both;"></div>
+
+		<div id="box-4" class="box">
+			<h3>Heading</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem dolor, soluta esse voluptas aliquam eligendi veritatis illo impedit minus unde.</p>
+		</div>
+
+	</div>
+</body>
+</html>

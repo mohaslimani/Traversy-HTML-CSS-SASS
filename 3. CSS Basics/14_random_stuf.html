@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Display, Visibility, Important</title>
+</head>
+<style>
+	body {
+		background: lightslategray;
+		max-height: 900px;
+	}
+
+	#container {
+		background-color: whitesmoke;
+		font-family: Georgia, serif;
+		max-width: max-content;
+		margin: auto;
+		padding: 1.7em;
+	}
+
+	h1 {
+		text-align: center;
+		border-radius: 10px;
+		background: #666;
+	}
+
+	div div{
+		font-size: 20px;
+	}
+
+	.viis , .dsp{
+		display: block;
+		width: 100%;
+		padding: 30px;
+		font-size: 20px;
+	}
+
+	.dsp:hover {
+		display: none;
+	}
+	.viis:hover, .viis:active{
+		visibility: hidden;
+	}
+
+	span {
+		font-weight: bolder;
+		color: blue !important;
+	}
+	/* this wont be used cause !important override it before */
+	span {
+		color: tomato;
+	}
+
+	.viis {
+		background: whitesmoke;
+	}
+	/* this wont be used because it exist a class before it */
+	button {
+		background: black;
+	}
+
+	/* margins can be negative u fucking morron */
+	.nega {
+		width: fit-content;
+		background: chartreuse;
+		margin-top: -60px;
+		margin-left: -330px;
+		margin-bottom: 10px;
+	}
+</style>
+<body>
+	<div id="container">
+		<h1> Display </h1>
+		<h2> display: none; will make the Element disapear as if it never existed. </h2>
+		
+		<div style="background-color: indianred;">
+			<h2 class="dsp"> touch me and i will fucking go. </h2>
+		</div>
+
+		<h1> visibility </h1>
+		<h2> visibility: hidden; will hide the element and let its place exist </h2>
+		<div style="background-color: lightblue;">
+			<button class="viis"> click me and i will fucking disapear. </button>
+			<li>
+				those properties help in responsive/mobile designs.
+			</li> 
+		</div>
+		
+		<h1>!Important // selectors order </h1>
+		<div>
+			<ul>
+				<li> in css, u can list multiple options for one property, and separate them with comma (,) </li>
+				<li> font-family: Georgia, serif; ::::: "Georgia" will be used, but if it not exist in the browser "serif" will be used. </li>
+				<li> class selectors will override element selectors. </li>
+				<li> CSS parse the .class last, so the order between .class selectors and element selectors wont make difference. </li>
+				<li> if u put <span> !Important </span> after a property that property will override every other one, no matter the order or the selector used. </li>
+				<li> this property helps using other css Frameworks (like bootstrap). </li>
+			</ul>
+		</div>
+
+		<h1> Negative Margin </h1>
+		<div>
+			margins can be negative.
+		</div>
+		<div class="nega">
+			i am a negative margin-top-left: ((-60, -330)) <br> and will affect other elements too;
+		</div>
+	</div>
+</body>
+</html>

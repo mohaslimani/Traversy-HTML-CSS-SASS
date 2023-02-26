@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="this is a bad, responsive as i can portfolio that u should not know about.">
+	<meta name="keywords" content="bla bla, bla">
+	<meta name="robots" content="NOINDEX, NOFOLLOW"> <!-- u shoul not searchOf/find this. -->
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/about.css">
+	<link rel="stylesheet" media="screen and (max-width: 768px)" href="./css/mobile.css">
+	<title> About | HTML5, CSS3, kHANeZ </title>
+</head>
+<body>
+	<header>
+		<nav id="navbar">
+			<div class="container">
+				<h1 class="logo_plz"><a href="./index.html"> SecF </a> </h1>
+				<ul>
+					<li> <a href="./index.html"> Home </a> </li>
+					<li> <a href="./myList.html"> My list </a> </li>
+					<li class="current"> <a href="./About.html"> About </a> </li>
+					<li> <a href="./Contact.html"> Contact Me </a> </li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<section id="about-info" class="bg-light pd-3">
+		<div class="container">
+			<div class="rightDiv">
+				<img src="./img/large_msoulaim.jpg" alt="myself">
+			</div>
+			<div class="leftDiv">
+				<h2 class="bigHead primary-txt"> Soulaimani Mohamed </h2>
+				<p>
+					This shit aint about ME .
+<br>- if you don't have any ui design, then visite boottrap/... theme sites or a real site, so you have now the inspiration. as brad said graphic design is not that hard you need just a lot of exp/inspirations...
+
+<br>- divise the site into rows/sections. (header(nav) + ...)
+<br>- reset all css props * { margin=padding=0; box-sozing: border box }
+<br>- now everything does not have any margin or padding. you can set them yourslf. bc i cant remember every tag and its properties. that will make h1 and p tags useless but its for the better, we want to use them as notations ( like header-div-nav-footer ...)
+<br>- reset anchor props we do not need that ugly decoration. a {color :...  ;text-deco: none}
+<br>- h1,h2... are titles it will be best if you fix thiere padding because evry title have its own paragrahs. if its ugly specificaly change the margin in another css class.
+<br>-  p give it an up and down magin.
+<br>- overflow: auto is crucial in float pages. bc the header element will crush after floating the children(h1 & ul). and have no content=no background(size=0).
+<br>- use ul for navs.
+<br>- the simplest way to style is to style element by element, if you noticed a repetition use it. this is better than utility classes. don't create whats already exists,(tailwind/bootstrap).
+<br>- we used a .container in every row instead of doing it for the whole body. bc we want somethings to stretch(backgrounds) and other things to not (content...nav...)
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="testimonials" class="pd-3">
+		<h1 class="bigHead" style="color: white;"> what my imaginary fans/friends say About me</h1>
+		<div class="container">
+			<div class="test bg-primary">
+				<img src="./img/perso01.jpg" alt="madha">
+				<h3> madha</h3>
+				<p> this guy is soo good looking i wish i was him :((( </p>
+			</div>
+			<div class="test bg-primary">
+				<img src="./img/perso02.jpg" alt="nada">
+				<h3> nada</h3>
+				<p> u look like shit. and your work look like u. go practice more of this shit then post a proper portfolia u piece of shit. :) </p>
+			</div>
+			<div class="test bg-primary">
+				<img src="./img/perso03.jpg" alt="prtata">
+				<h3> prtata</h3>
+				<p> i wish i knew those people :/ . </p>
+			</div>
+		</div>
+	</section>
+
+	<footer id="home-footer">
+		<p>Moha First html-css kahnez &copy; 2019, All RIghts Reserved</p>
+	</footer>
+</body>
+</html>

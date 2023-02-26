@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css types</title>
+
+	<!-- u can include multiple css -->
+	<link rel="stylesheet" href="css_dir/style_0.css">
+	<link rel="stylesheet" href="style_0.css">
+	
+	<style>
+		
+		/* i am a comment in an internal css*/
+		h2 {
+			color: green;
+		}
+		div {
+			font-size: 30px;
+		}
+		h5 {
+			color: grey;
+		}
+		
+	</style>
+
+	<link rel="stylesheet" href="style_1.css">
+	
+</head>
+<body>
+
+	<h1> there are three way to use CSS </h1>
+	<div>
+		the css use order :
+		<ol>
+			<li>inline css</li>
+			<li>internal css</li>
+			<li>
+				external css
+				<ol type="i">
+					two css files
+					<li> last file linked</li>
+					<ol type="a">
+						the same file
+						<li>
+							last cascade used.
+						</li>
+					</ol>
+				</ol>
+			</li>
+		</ol>
+	</div> <br>
+
+	<div>
+		<li> another way to say this is (the last cascade declared) is the one used:</li>
+		<ol>
+			<li> external (before style tag in &lt;head&gt;)</li>
+			<li> internal </li>
+			<li> external (after style tag in &lt;head&gt;)</li>
+			<li> inline </li>
+		</ol>
+	</div>
+
+	<br><br>
+
+	<!-- inline css -->
+	<h1> inline css </h1>
+	<h2 style="color: red;">the inline css is the dominating one</h2>
+	<br><br>
+
+	<!-- internal css -->
+	<h1> internal css </h1>
+	<h2> the internal is the second used css </h2>
+
+	<br><br>
+
+	<!-- external css -->
+	<h1> external css </h1>
+	<h2> the last used </h2>
+	<h3> from the external (violet) </h3>
+	<br>
+
+	<h1> between external css (links order) </h1>
+	<h3> this style from :: last link </h3>
+
+	<h1> between the same external css (declaration order) the second link</h1>
+	<h4> css used is from the  </h4>
+
+	<h1> the only (external css) used before the (internal)</h1>
+	<div style="color: gray;"> is the one linked after the internal </div>
+
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position</title>
+	<style>
+		body {
+			font-size: 20px;
+		}
+		h2 {
+			text-align: center;
+			margin: 30px auto;
+			padding: 30px auto;
+			border: solid 1px;
+			border-radius: 10px;
+		}
+		img, ul{
+			padding-right: 20px;
+			display: block;
+			width :30%;
+			margin: auto;
+			border : dotted 1px;
+		}
+
+		.txt-box {
+			box-sizing: border-box;
+			text-align: center;
+			width: 100px;
+			height: 100px;
+			padding: 40% 0px;
+		}
+		
+		.box {
+			box-sizing: border-box;
+			width: 100px;
+			height: 100px;
+		}
+		#box-1 {
+			background-color: red;
+			/* those lines means shit */
+			top: 10px;
+			bottom: 10px;
+			left: 10px;
+			right: 10px;
+		}
+		#box-2 {
+			background-color: blue;
+			position: relative;
+			top: 50px;
+			left: 50px;
+		}
+		#box-42 {
+			background-color: blue;
+			position: relative;
+			top: 50px;
+			left: 50px;
+			z-index: -42;
+		}
+
+		#box-c {
+			color: honeydew;
+			position: relative;
+			background-color: #333;
+			height: 500px;
+			/* takes the width of the parent element - padding - our-margin */
+		}
+		#box-3 {
+			color: black;
+			background-color: yellow;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		#box-4 {
+			color: black;
+			background-color: greenyellow;
+			position: absolute;
+			bottom: 50px;
+			right: 50px;
+		}
+		#box-5 {
+			background-color: orange;
+			position: fixed;
+			bottom: 50px;
+			right: 50px;
+		}
+		#box-6 {
+			background-color: green;
+			position: sticky;
+			top: 10px;
+			left: 10px;
+			bottom: 10px;
+			right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h2> CSS Position </h2>
+		<img src="./img/position.png" alt="position">
+	</div>
+	<div>
+		<h2> Position : Static </h2>
+		<ul>
+			this is the default value for positioning and it means that the element is not affected by the properties like :
+			<li>top : 100px </li>
+			<li>right : 100px</li>
+			<li>bottom : 100px</li>
+			<li>left : 100px</li>
+			the red box is the static box
+			<div id="box-1" class="box">
+				<div class="txt-box"> static-box </div>
+			</div>
+		</ul>
+	</div>
+
+	<div>
+		<h2> Position : relative </h2>
+		<ul>
+			<li>now u can use the (trbl) properties.</li>
+			<li>they depend to the parent element (static).</li>
+			<li>or we can say they depend to the supposed static place of the element itself.</li> 
+			<li> top: 50px; / left: 50px; </li>
+			<div id="box-2" class="box">
+				<div class="txt-box"> relative-box </div>
+			</div>
+			<div id="box-1" class="box">
+				<div class="txt-box"> static-box </div>
+			</div>
+		</ul>
+	</div>
+
+	<div>
+		<h2> z-index : number; </h2>
+		<ul>
+			<li>z-index is a property that controls the accumulation between elements</li>
+			<li>by default the element will be in top of its previous</li>
+			<li>the z-index takes a number serve the importance</li>
+			<li> the higher the closer will be to u. (zero is the default)</li>
+			<li>the number can be positive or negative</li>
+			<div id="box-42" class="box">
+				<div class="txt-box" style="padding: 10% 0px;"> static-box-42 </div>
+			</div>
+			<div id="box-1" class="box">
+				<div class="txt-box"> static-box </div>
+			</div>
+		</ul>
+	</div>
+
+	<div>
+		<h2> Position : Absolute </h2>
+		<ul>
+			<li>u can use the (trbl) properties.</li>
+			<li>they depend to the parent element.</li>
+			<li>the parent element should be relative. else it will depend to the (first window) element.</li>
+			<li> for more fun try to zoom(in/out) or change the window height and width. </li> 
+			<li> also (absolute position) is relative to the scroll. </li>
+			<li> top: 50px; / left: 50px; </li>
+			<li> bottom: 50px; / right: 50px; </li>
+			<div id="box-c">
+				&nbsp;&nbsp;&nbsp; relative-container-box
+				<div id="box-3" class="box">
+					<div class="txt-box"> abs-box-3 </div>
+				</div>
+				<div id="box-4" class="box">
+					<div class="txt-box"> abs-box-4 </div>
+				</div>
+			</div>
+		</ul>
+	</div>
+
+	<div>
+		<h2> Position : fixed </h2>
+		<ul>
+			<li>exist out of the flow of the body.</li>
+			<li>depend to the window.</li>
+			<li>fixed for all the other elements.</li>
+			<li>exist in top of other elements.</li>
+			<li>doesnt matter where exists in the doc. wouldnt effect the height of his parent. </li>
+			<div id="box-5" class="box">
+				<div class="txt-box"> fixed-box </div>
+			</div>
+		</ul>
+	</div>
+
+	<div>
+		<h2> Position : sticky </h2>
+		<ul style="height: 1000px;">
+			<li>used for menus.</li>
+			<li>a fixed position element. to its original place in the doc.</li>
+			<li>depends on its parent element.</li>
+			<li>BUT</li>
+			<li>it sticks to the position u gave it when scrolling.</li>
+			<div style="height: 40%;"></div>
+			<div id="box-6" class="box">
+				<div class="txt-box"> sticky-box </div>
+			</div>
+		</ul>
+	</div>
+
+	<div id="box-1" class="box">
+		<div class="txt-box"> static-box </div>
+	</div>
+	<div id="box-2" class="box">
+		<div class="txt-box"> relative-box </div>
+	</div>
+	<div id="box-3" class="box">
+		<div class="txt-box"> abs-box-3 </div>
+	</div>
+	<div id="box-4" class="box">
+		<div class="txt-box"> abs-box-4 </div>
+	</div>
+	<div id="box-5" class="box">
+		<div class="txt-box"> fixed-box </div>
+	</div>
+	<div style="height: 1000px;"></div>
+	<div id="box-6" class="box">
+		<div class="txt-box"> sticky-box </div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Links & Buttons</title>
+	<style>
+	body {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+	a {
+		color: #333;
+		/* removes the line under the link */
+		text-decoration: none;
+	}
+
+	/* pseudo selector */
+	a:hover {
+		color: coral;
+		font-size: 30px;
+	}
+
+/* a:visited {
+		color: red;
+	} */
+
+	a:active {
+		color: red;
+	}
+
+	/* Button Styling */
+	.btn {
+		background: #4c6ca0;
+		color: #fff;
+		/* the button element have a default borders, we get rid of it */
+		border: none;
+		font-size: 16px;
+		padding: 10px 20px;
+		border-radius: 5px;
+		/* Allows control over cursor appearance in an element (change it from cursor to a hand) */
+		cursor: pointer;
+	}
+
+	.btn:hover {
+		color: #f4f4f4;
+		background: #446190;
+	}
+	</style>
+</head>
+<body>
+	<h2> there are a looooot of pseudo selector </h2>
+	<br>
+	<a class="btn" href="#">My Link</a>
+	<br>
+	<br>
+	<button class="btn">My Button</button>
+</body>
+</html>

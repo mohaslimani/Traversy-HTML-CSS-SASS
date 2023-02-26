@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Box Model / Margin & Padding</title>
+	<style>
+		/* CSS Reset */
+		* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		text-align: center;
+		}
+
+		.box {
+		background: #f4f4f4;
+		border: 2px #777 solid;
+		width: 500px;
+
+		/* Padding on all sides */
+		padding: 20px;
+
+		/* Padding per side */
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+
+		/* Padding shorthand = top, right, bottom, left */
+		padding: 10px 20px 10px 20px;
+
+		/* Padding shorthand = top/bottom left/right */
+		padding: 10px 20px;
+
+		/* Margin on all sides */
+		margin: 20px;
+
+		/* Margin per side */
+		margin-top: 10px;
+		margin-right: 20px;
+		margin-bottom: 10px;
+		margin-left: 20px;
+
+		/* Margin shorthand = top, right, bottom, left */
+		margin: 10px 20px 10px 20px;
+
+		/* Margin shorthand = top/bottom left/right */
+		margin: 10px 20px;
+		}
+
+		.box h3 {
+			padding-bottom: 10px;
+		}
+
+		img
+		{
+			width: 1000px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h3>Box One</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla beatae id, dolorum accusamus neque atque similique consectetur eaque odio?</p>
+	</div>
+	<div class="box">
+		<h3>Box Two</h3>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nulla beatae id, dolorum accusamus neque atque similique consectetur eaque odio?</p>
+	</div>
+	<div>
+		<h2> chrome properties </h2>
+		<h3> select property let u select elements and show their css styling </h3>
+		<img src="./img/slct_prprty.png" alt="select property">
+
+		<h3> the selected css for &lt;class="box"&gt; </h3>
+		<img src="./img/chrome_css.png" alt="chrome_css">
+
+		<h3> here are the (size, padding, border, margin) and their respectfull pixel sizes </h3>
+		<h3> the Computed feature will give u the final/absolute sizes in px (if u have relative units in css) </h3>
+		<img src="./img/inline_size.png" alt="inline_size">
+		<img src="./img/padding.png" alt="padding">
+		<img src="./img/border.png" alt="border">
+		<img src="./img/margin.png" alt="margin">
+	</div>
+</body>
+</html>

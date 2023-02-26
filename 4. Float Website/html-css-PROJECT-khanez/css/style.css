@@ -1,0 +1,211 @@
+/* Reset */
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+/* Main Styling */
+body, html {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.7em;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+h2, h3, h1 {
+	padding-bottom: 20px;
+}
+
+p {
+	margin: 10px 0;
+}
+
+/* Utility Class */
+
+/* some reusable paddings */
+.pd-1 { padding: 20px 0px; }
+.pd-2 { padding: 30px 0px; }
+.pd-3 { padding: 40px 0px; }
+
+.bigHead { font-size: 40px; }
+/* container */
+/* the container is inside the navbar because we want the background color of the background to hit the sides */
+
+.container {
+	max-width: 1100px;
+	margin: auto;
+	overflow: auto;
+	padding: 0px 20px;
+}
+
+.primary-txt {
+	color: #77ACF1;
+}
+
+.sec-txt {
+	color: #855f27;
+}
+
+.lead-txt {
+	font-size: 20px;
+}
+/* buttons style */
+.btn {
+	display: inline-block;
+	font-size: 18px;
+	border : none;
+	background: #333;
+	color: white;
+	padding : 13px 20px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: #77ACF1;
+	color: #333;
+}
+
+.btn-light {
+	background: #f4f4f4;
+	color: #333;
+}
+
+/* background style */
+.bg-dark {
+	background: #333;
+	color: #fff;
+}
+
+.bg-light {
+	background: #f4f4f4;
+	color: #333;
+}
+
+.bg-primary {
+	background: #77ACF1;
+	color: #333;
+}
+
+/* navbar */
+#navbar {	
+	background-color: #333;
+	color: white;
+	overflow: auto;
+}
+
+#navbar a {
+	color: white;
+}
+
+#navbar h1 {
+	float: left;
+	/* we gived h1 already a 20px bottom-padding we added this to adjust the navbar */
+	/* i didnt do it globally because i dont want a hover effect over my h1 element. */
+	padding-top: 20px;
+}
+
+#navbar ul {
+	float: right;
+	list-style: none;
+}
+
+#navbar ul li {
+	float: left;
+}
+
+#navbar li a {
+	display: block;
+	/* restted padding for li elements to (0px) and and replace it here li-a with a 20px to make the hover make sense */
+	padding: 20px;
+	text-align: center; 
+}
+
+#navbar li a:hover ,
+#navbar li.current {
+	color: #77ACF1;
+	background-color: #444;
+}
+
+/* showcase */
+
+#showcase {
+	background: url(../img/back03.jpg) no-repeat center center/cover;
+	height: 600px;
+	text-align: center;
+	color: white;
+	line-height: 1.7em;
+	padding-top: 170px;
+}
+
+#showcase h1 {
+	font-size: 60px;
+	line-height: 1.2em;
+}
+
+#showcase p {
+	padding-bottom: 20px;
+	line-height: 1.7em;
+}
+
+/* section-1 home Info (the image + paragraph) */
+/* this section is hard to make it responsive */
+
+
+#home-info {
+	height: 400px;
+}
+
+#home-info .info-img{
+	background: url('../img/back02.jpg') no-repeat center center/cover;
+	float: left;
+	width: 50%;
+	min-height: 100%;
+}
+
+#home-info .info-content {
+	text-align: center;
+	float: right;
+	width: 50%;
+	height: 100%;
+	padding: 50px 30px;
+	/* no scroll_bar should be shown */
+	overflow: hidden;
+}
+
+#home-info p {
+	padding: 30px 0px;
+	max-width: 60%;
+	margin: auto;
+	font-size: 20px;
+}
+
+/* 3boxs - features section */
+
+.box {
+	float: left;
+	width: 33.3%;
+	/* u can use either of those padding they arent make much diff */
+	/* padding: 40px; */
+	padding: 4%;
+	text-align: center;
+	/* the boxs have the same size because of this line u fucker */
+	height: 280px;
+	overflow: hidden;
+}
+
+.box i {
+	margin-bottom: 10px;
+}
+
+/* footer */
+
+#home-footer {
+	text-align: center;
+	background: #444;
+	color: #fff;
+	padding: 20px;
+}

@@ -1,0 +1,48 @@
+#list-info {
+	height: 400px;
+	color: rgb(4, 0, 154);
+}
+
+#list-info .html-img{
+	background: url('../img/html.png') no-repeat left top/cover;
+	float: left;
+	width: 50%;
+	min-height: 100%;
+}
+
+
+#list-info .info-content {
+	background-color: #C0FEFC;
+	text-align: center;
+	float: right;
+	width: 50%;
+	height: 100%;
+	padding: 50px 30px;
+	/* no scroll_bar should be shown */
+	overflow: hidden;
+}
+
+#list-info .css-img{
+	background: url('../img/css.png') no-repeat left top/cover;
+	float: right;
+	width: 50%;
+	min-height: 100%;
+}
+
+#list-info .info-content-left {
+	background-color: #C0FEFC;
+	text-align: center;
+	float: left;
+	width: 50%;
+	height: 100%;
+	padding: 50px 30px;
+	/* no scroll_bar should be shown */
+	overflow: hidden;
+}
+
+#list-info p {
+	padding: 30px 0px;
+	max-width: 60%;
+	margin: auto;
+	font-size: 20px;
+}

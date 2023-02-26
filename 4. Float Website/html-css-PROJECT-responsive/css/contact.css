@@ -1,0 +1,27 @@
+#contact-input .grp-form {
+	margin-bottom: 20px;
+}
+
+.grp-form label {
+	margin-bottom: 5px;
+	display: block;
+}
+
+.grp-form input,
+.grp-form textarea {
+	width: 90%;
+	padding: 10px;
+	border: 1px #ddd solid;
+	border-radius: 5px;
+}
+
+.grp-form textarea {
+	height: 200px;
+}
+
+.grp-form input:focus,
+.grp-form textarea:focus {
+	background: #ddd;
+	outline: none;
+	border-color: #77ACF1;
+}

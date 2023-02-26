@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <!-- the fonts are linked the same way as a css file (there are other ways) -->
+	 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<title> Fonts </title>
+	<style>
+
+	/* line-height Determines the block-progression dimension of the text content area of an inline box. */
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 18px;
+		line-height: 1.6em;
+	}
+
+	/* font-weight can be by pixel or just a word (like font-size) */
+	#welcome p span {
+		font-weight: bold;
+	}
+
+	/* font-style used for simple styling  */
+	#about p span {
+		font-weight: bolder;
+		font-style: italic;
+	}
+
+	/* the simple quote means Roboto is downloaded from the link */
+	h2 {
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+	}
+
+	img{
+		width: 300px;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="welcome">
+		<h2 class="primary-heading">Welcome</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			<span>Quod qui iusto perferendis nisi officia quidem ad enim</span>
+			maiores animi maxime.
+		</p>
+	</div>
+
+	<div id="about">
+		<h2>About</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			<span>Eveniet laudantium voluptatum dolorum iure,</span>
+			eos et distinctio porro provident ut assumenda.
+		</p>
+	</div>
+
+	<div>
+		<h2> CSS Units </h2>
+		<h3> **Absolute </h3>
+		<img src="img/abs_units.png" alt="abs_units">
+		<h4> **relative </h4>
+		<img src="img/relative_units.png" alt="relative_units">
+	</div>
+</body>
+</html>
