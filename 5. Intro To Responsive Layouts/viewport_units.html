@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Viewport units</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			padding: 0px;
+			margin: 0px;
+		}
+
+		.box {
+			float: left;
+			/* we are not using 33.33vw because we have a scroll at the right (we have less that 100vw), we can fix this if we dont need to scroll */
+			width: 32.2vw;
+			font-size: 10vw;
+			/* margin: auto 0.4vw; */
+		}
+		.hbox {
+			font-size: 5vh;
+			height: 100vh;
+			background-color: gray;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="hbox"> 
+		<div class="box" style="background-color: red;">1</div>
+		<div class="box" style="background-color: greenyellow;">2</div>
+		<div class="box" style="background-color: blueviolet;">3</div>
+		<div style="clear: both;"></div>
+		<p>
+			change the height of the window and sroll down. try to zoom in and out and see again.
+		</p>
+	</div>
+	<div style="font-size: 50px;"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt earum vitae ad autem voluptas error maxime, distinctio nemo. In odio obcaecati itaque hic ducimus ad, a temporibus, aspernatur quidem quibusdam laboriosam? Doloribus eos temporibus cumque est adipisci incidunt doloremque earum dolor consectetur corporis neque, nostrum magni amet dignissimos officia repellat nulla impedit aperiam. Deleniti iusto sit odio deserunt accusantium ad! </div>
+</body>
+</html>

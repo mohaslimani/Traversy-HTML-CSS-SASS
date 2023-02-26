@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Em</title>
+	<style>
+	/* styling */
+	body {
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		text-align: center;
+		max-width: 990px;
+		margin: auto;
+		background-color: #222;
+		font-size: 16px;
+	}
+	
+	.container {
+		background-color: rgb(199, 199, 199);
+		border: chartreuse 5px solid;
+		border-radius: 15px;
+		margin-bottom: 20px;
+	}
+	
+	h1 {
+		border-radius: 15%;
+		background-color: #444;
+		color: peachpuff;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		margin: auto;
+		border-radius: 15px;
+	}
+
+	.sec {
+		border-bottom: 2px black dotted;
+		width: 90%;
+		margin: auto;
+	}
+
+	li, ul {
+		text-align: left;
+		margin: 10px;
+		padding: 0px 35px;
+	}
+
+	/* Em */
+	.larger-font {
+		font-size: 1.5em;
+	}
+
+	.em_c {
+		font-size: 10px;
+	}
+
+	.em_c p {
+		font-size: 1.5em;
+		margin: 2em;
+		padding: 1em;
+	}
+
+	.ull ul {
+		font-size: 1.2em;
+	}
+
+	</style>
+</head>
+<body>
+	<h1>Em</h1>
+	<div class="container">
+		<div class="sec">
+			<h2> Em </h2>
+			<p> em unit is a multiplier for the parent element size  </p>
+		</div>
+		<div class="sec">
+			<h2> Some Examples </h2>
+			<p> by default the &lt;p&gt; element has a margin and a font size of 1em.</p>
+			<img src="./img/p_default.png" alt="p">
+			<li>and we know that the root/html element has 16px as font-size, then by default the p element will have a 16px as font size.</li>
+			<li> normally the p element will take the div_direct_parent size*1 but the divs font-size is not specified. <br> so its gonna keep going up until it reaches a font-size-specified-element.</li>
+			<div class="larger-font"> <p> here is a p element inside a 1.5em div (16 * 1.5 * 1 = 24px) </p> </div>
+			<img src="./img/p_larger.png" alt="p_larger">
+			<p>the confusing thing here the margins also will change their value to 24px.</p>
+			<div class="em_c">
+				<p>this is fucking confusing me, the padding(margin?) takes the 1em of the p same element and not the parent.</p>
+			</div>
+		</div>
+		<div class="sec">
+			<h2>inhertnce here is a fucking mess.</h2>
+			<div class="ull">
+				<ul><li>1<ul><li>1<ul><li>1<ul><li>1<ul><li>1</li></ul></li></ul></li></ul></li></ul></li></ul>
+			</div>
+		</div>
+		<div class="sec">
+			<h2>em & font-size chrome settings</h2>
+			<p> Another negative thing, changing in fontsize setting will affect the relative to the html/root element only and will not affect the relative to a fixed parent. </p>
+		</div>
+		<div class="sec" style="color: green;"><p> the best practice is to not use that shit w sf.</p></div>
+	</div>
+</body>
+</html>

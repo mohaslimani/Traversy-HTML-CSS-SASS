@@ -11,7 +11,8 @@
 /* showcase */
 
 #showcase {
-	padding-top: 10vh;
+	padding: 8vh;
+	height: fit-content;
 }
 
 /* home-info */
@@ -46,6 +47,7 @@
 @media (max-width: 690px) {
 	#about-info {
 		height: 100%;
+		line-height: 1.2;
 	}
 	#about-info .leftDiv, #about-info .rightDiv{
 		float: none;
