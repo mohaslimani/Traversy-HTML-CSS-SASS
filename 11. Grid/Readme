@@ -1,0 +1,7 @@
+#Grid is like flexbox, but gives #two_dmentional_layout
+
+#grid can use align-items & justify content ..
+
+#all direct childs for a grid are grid items
+#grid-template-columns : defines width and number of columns;
+#present a new unit of mesure called FRACTIONS
