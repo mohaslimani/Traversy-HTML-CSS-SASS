@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> flex ref </title>
+	<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+		background-color: #333;
+	}
+
+	.item_img {
+		border: #ccc solid 2px;
+		border-radius: 10px;
+		width: 90%;
+		max-width: 800px;
+	}
+	
+	.item {
+		background: #f4f4f4;
+		border: #ccc solid 2px;
+		margin: 10px;
+		padding: 10px;
+		text-align: center;
+		border-radius: 10px;
+	}
+	
+	.fixW {
+		width: 300px;
+	}
+	.fixlW {
+		width: 150px;
+	}
+	
+	.flex-container {
+		display: flex;
+	}
+
+	.hl {
+		color: blueviolet;
+		font-weight: bolder;
+	}
+
+	.bg {
+		background-color: blueviolet;
+		margin: 2vw 15vw;
+	}
+
+	ul {
+		text-align: left;
+	}
+
+	/* flex wrap */
+	.fw {
+		flex-wrap: wrap;
+	}
+
+	/* flex orientations */
+	.fo-rrow {
+		flex-direction: row-reverse;
+	}
+	.fo-col {
+		flex-direction: column;
+	}
+	.fo-rcol {
+		flex-direction: column-reverse;
+	}
+
+	/* flex items */
+	.flexNoshrink {
+		flex-shrink: 1;
+	}
+	.flexGrow {
+		flex-grow: 1;
+	}
+	.flexB {
+		flex-basis: 4;
+	}
+	.flexx {
+		flex : 1 1 200px;
+	}
+
+	/* flex-align */
+	.falign-c {
+		align-items: center;
+	}
+	.falign-r {
+		align-items: flex-end;
+	}
+
+	/* self-align */
+	.i1 {
+		height: 100px;
+		align-self: flex-end;
+	}
+	.i2 {
+		height: 100px;
+		align-self: center;
+	}
+	.i3 {
+		height: 100px;
+		align-self: flex-start;
+	}
+
+	</style>
+</head>
+<body>
+	<h1 class="item"> Flexbox </h1>
+	<img class="item_img" src="./flex_basic.png" alt="flex_basic">
+
+	<h1 class="item"> flex & flex-container properties. </h1>
+	<div class="bg item">
+		<h2 class="item hl"> width / max-width / adjusting</h2>
+		<div class="item"> those 3 items have <span class="hl">300px</span> as fixed width play with window-width to see how will they behave. <br> the width is considered a <span class="hl">max-width</span> but if the window width is less than the necessairy the items will shrink their width automatically so they can be at the same line.</div>
+		<div class="flex-container">
+			<div class="item fixW"><h3>Item 1</h3></div>
+			<div class="item fixW"><h3>Item 2</h3></div>
+			<div class="item fixW"><h3>Item 3</h3></div>
+		</div>
+		<h2 class="item hl"> flex-wrap </h2>
+		<div class="item"> flex-wrap will stop the above property and make the size of the items fixed and behave like a good-float wraping the next item below. the default value is nowrap. <br> here i just used the reverse-row orientation with it. </div>
+		<div class="flex-container fw fo-rrow">
+			<div class="item fixW"><h3>Item 1</h3></div>
+			<div class="item fixW"><h3>Item 2</h3></div>
+			<div class="item fixW"><h3>Item 3</h3></div>
+		</div>
+	</div>
+
+	<div class="bg item">
+		<h2 class="item hl"> flex-direction & main-axis </h2>
+		<div class="item">
+			<p>the flex-container can have multiple <span class="hl">FLEX-properties</span> that affect its items.</p>
+			<ul>
+				<span class="hl"> flex-direction :</span> can have multiple option : <span class="hl">row</span> (default see above) / <span class="hl">column</span> (see below)
+				<li>row / column affect how the element are aligned.</li>
+				<li>and change the <span class="hl"> main-axis orientation </span> that affects how other properties and aligning is percieved.</li>
+			</ul>
+		</div>
+
+		<div class="flex-container item fo-rrow">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		<div class="flex-container item fo-col">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		<div class="flex-container item fo-rcol">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+	</div>
+	
+	
+	<h1 class="item"> flex & flex-items properties. </h1>
+	<div class="item bg"> 
+		<h2 class="item hl">direction : row(default main axis)</h2>
+		<div class="item"> 
+			<p> the flex items can take 3 possible properties <br> and will affect the flex only horizontally</p>
+			<ul>
+				<li>flex-shrink : (0 noshrink / 1 ..) : Sets the flex shrink factor.</li>
+				<li>flex-grow : (0 noGrow / 1 ..) Sets the flex grow factor.</li>
+				<li>flex-basis : number / a factor for each item (what fraction it can take per item).</li>
+			</ul>
+		</div>
+		<h2 class="item hl"> flex-shrink </h2>
+		<div class="item">
+			<p>if u put this shit to 0, its original width will be so fixed. <br> else it will shrink by a factor.</p>
+			<ul>
+				<li>shrink 0 : will always hold its width, even if it pushes the other boxes outside of our page (horizontal scroll).</li>
+				<li>shrink 1 : will take its 300px until there is no more spase then it will start shrink.</li>
+				<li>shrink 3 : like shrink 1, but will shrink more agressivly.</li>
+			</ul>
+		</div>
+		<div class="flex-container item">
+			<div class="item fixW" style="flex-shrink: 0;"><h3>shrink 0</h3></div>
+			<div class="item fixW" style="flex-shrink: 1;"><h3>shrink 1</h3></div>
+			<div class="item fixW" style="flex-shrink: 3;"><h3>shrink 3</h3></div>
+		</div>
+		<p>note that nothing will change, if their combined width is less than the screen (wouldnt grow) </p>
+		<div class="flex-container item">
+			<div class="item fixlW" style="flex-shrink: 0;"><h3>shrink 0</h3></div>
+			<div class="item fixlW" style="flex-shrink: 1;"><h3>shrink 1</h3></div>
+			<div class="item fixlW" style="flex-shrink: 3;"><h3>shrink 3</h3></div>
+		</div>
+		
+		<h2 class="item hl"> flex-grow </h2>
+		<div class="item">
+			<p>here our items takes 150px each, have the default shrink (1) so they will be all the same width as long as the available space is less than (150 * 3)px, <br> else evety item will take the ratio they have.</p>
+		</div>
+		<div class="flex-container item">
+			<div class="item fixlW" style="flex-grow: 0;"><h3>grow 0</h3></div>
+			<div class="item fixlW" style="flex-grow: 1;"><h3>grow 1</h3></div>
+			<div class="item fixlW" style="flex-grow: 3;"><h3>grow 3</h3></div>
+		</div>
+		<p>if they have no width and one of them at least have a grow +1 they will fill all the space they have.</p>
+		<div class="flex-container item">
+			<div class="item" style="flex-grow: 0;"><h3>grow 0</h3></div>
+			<div class="item" style="flex-grow: 1;"><h3>grow 1</h3></div>
+			<div class="item" style="flex-grow: 3;"><h3>grow 3</h3></div>
+		</div>
+
+		<h2 class="item hl"> flex-basis </h2>
+		<div class="item">
+			<p>the basis is a ratio or a fixed width </p>
+		</div>
+		<p> flex-Grow : 1 for all items </p>
+		<div class="flex-container item">
+			<div class="item flexGrow" style="flex-basis: 0;"><h3>basis 0</h3></div>
+			<div class="item flexGrow" style="flex-basis: 1;"><h3>basis 1</h3></div>
+			<div class="item flexGrow" style="flex-basis: 3;"><h3>basis 3</h3></div>
+		</div>
+		<p> flex-shrink: 1 for all items </p>
+		<div class="flex-container item">
+			<div class="item flexNoshrink" style="flex-basis: 0px;"><h3>basis 0px</h3></div>
+			<div class="item flexNoshrink" style="flex-basis: 500px;"><h3>basis 500px</h3></div>
+			<div class="item flexNoshrink" style="flex-basis: 300px;"><h3>basis 300px</h3></div>
+		</div>
+
+		<h2 class="item hl"> flex : a b c; </h2>
+		<div class="item">
+			<p>the best practice is to use the three at a time. </p>
+			<p> flex : grow shrink basis : 1 1 200px</p>
+		</div>
+		<div class="flex-container item">
+			<div class="item flexx"><h3>item 0</h3></div>
+			<div class="item flexx"><h3>item 1</h3></div>
+			<div class="item flexx"><h3>item 2</h3></div>
+		</div>
+	</div>
+
+	
+	<h1 class="item"> flex & flex-container align properties. </h1>
+	<img class="item_img" src="./flex-align.png" alt="flex_align">
+	<div class="bg item">
+		<p>if the direction is switched everything here will change.</p>
+		
+		<h2 class="item hl"> align-items in default-direction </h2>
+		<p class="item"> align-items: flex-start is the default. </p>
+		<h2 class="item"> align-items : center </h2>
+		<div class="flex-container item falign-c" style="height: 300px;">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		<h2 class="item"> align-items : flex-end </h2>
+		<div class="flex-container item falign-r" style="height: 300px;">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+
+		<h2 class="item hl"> align-items in reverse-column-direction </h2>
+		<h2 class="item"> align-items : center </h2>
+		<div class="flex-container item fo-rcol falign-c" style="height: 400px;">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		<h2 class="item"> align-items : flex-end </h2>
+		<div class="flex-container item fo-rcol falign-r" style="height: 400px;">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		
+		<h2 class="item hl"> justify-content in default-direction </h2>
+		<p class="item"> justify-content: flex-start is the default. </p>
+		<h4 class="item"> justify-content: flex-end; </h4>
+		<div class="flex-container item" style="justify-content: flex-end; ">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		<h4 class="item"> justify-content: center; </h4>
+		<div class="flex-container item" style="justify-content: center; ">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		<h4 class="item"> justify-content: space-around; </h4>
+		<div class="flex-container item" style="justify-content: space-around; ">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		<h4 class="item"> justify-content: space-between; </h4>
+		<div class="flex-container item" style="justify-content: space-between; ">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+		<h4 class="item"> justify-content: space-evenly; </h4>
+		<div class="flex-container item" style="justify-content: space-evenly; ">
+			<div class="item"><h3>Item 1</h3></div>
+			<div class="item"><h3>Item 2</h3></div>
+			<div class="item"><h3>Item 3</h3></div>
+		</div>
+	</div>
+
+	<h1 class="item"> flex & flex-items : align-self </h1>
+	<div class="bg item">		
+		<h2 class="item hl"> align-self </h2>
+		<p class="item"> that container in default direction(row) and a justify-content: space-evenly.</p>
+		<div class="flex-container item" style="height: 500px; justify-content: space-evenly;">
+			<div class="item i1"><h3>Item 1 : flex-end</h3></div>
+			<div class="item i2"><h3>Item 2 : center</h3></div>
+			<div class="item i3"><h3>Item 3 : flex-start</h3></div>
+		</div>
+
+	</div>
+</body>
+</html>

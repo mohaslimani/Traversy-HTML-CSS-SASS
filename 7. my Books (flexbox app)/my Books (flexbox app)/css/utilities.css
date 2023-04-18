@@ -1,0 +1,124 @@
+/* text colors */
+.primary-txt {
+	color: #00ADB5;
+}
+
+.sec-txt {
+	color: #393E46;
+}
+
+
+/* buttons */
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background: #00ADB5;
+	border: none;
+	border-radius: 8px;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+.btn-outline {
+	background: transparent;
+	border: 1px solid #fff;
+}
+/* background */
+.btn-primary, .bg-primary {
+	background: #00ADB5;
+	color: white;
+}
+.btn-sec, .bg-sec {
+	background: #393E46;
+	color: white;
+}
+.btn-dark, .bg-dark {
+	background: #393E46;
+	color: white;
+}
+.btn-light, .bg-light {
+	background: #f4f4f4;
+	color: #393E46;
+}
+
+/* flex-items */
+
+.flex-items {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+/* > means the direct child */
+.flex-items > div {
+	padding: 20px;
+	flex: 1 1 30%;
+}
+
+
+/* flex-reverser for flex-col*/
+.flex-columns.flex-rev .row {
+	flex-direction: row-reverse;
+}
+
+/* flex-columns */
+.flex-columns .row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.flex-columns .column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+}
+
+.flex-columns .column .txt-col {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 30px;	
+}
+
+/* section & section header */
+.section-header {
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.section-header h2 {
+	font-size: 40px;
+	margin: 20px 0;
+}
+
+.section-padding {
+	padding: 20px 20px 40px;
+}
+
+/* flex-grid */
+
+.flex-grid .row {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+.flex-grid .column {
+	flex: 25%;
+	max-width: 20%;
+	padding: 0 4px;
+}

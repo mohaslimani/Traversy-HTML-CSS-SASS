@@ -1,0 +1,45 @@
+/* overlay */
+
+/*
+simply to put an overlay
+u need to put a transparent layer/div over ur background image
+then put every other element on top of it
+*/
+
+/*
+using ::before alow us to insert content before the targeted element(.hero)
+the content we added is '' empty.
+we make the empty content :
+	{
+		absolute to .hero-element(the .hero is relative).
+		position as top/left 0;
+		make it height/width 100% of .hero (overlay all of hero)
+		background should be a transparent black.
+	}
+	the only element that cannot be overlayed by this element is the navbar(position: fixed).
+finally we take every other element we want on top of the overlay and change its z-index
+ */
+
+.hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+}
+
+.hero * {
+	z-index: 1;	
+}
+
+/* transparancy & js */
+.navbar.top {
+	background: transparent;
+}
+
+/* transition */
+.navbar {
+	transition: 0.5s;
+}

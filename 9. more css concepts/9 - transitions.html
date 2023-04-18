@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        body{
+            background: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 1rem;
+        }
+        .box:hover {
+            background: rebeccapurple;
+        }
+        .box0 {
+            background: white;
+        }
+        /*  */
+        .box1 {
+            background: white;
+            /*  */
+            transition-property: background;
+            transition-duration: 2s;
+        }
+        .box2 {
+            background: white;
+            transition-property: background;
+            /*  */
+            transition-duration: 5s;
+        }
+        .box3 {
+            margin: auto;
+            background: skyblue;
+            width: 50%;
+            height: 50%;
+            transition-property: background;
+            transition-duration: 5s;
+            /*  */
+            transition-delay: 1s;
+        }
+        .box4 {
+            background: white;
+            transition: background 2s ease-in-out;
+            transition-timing-function: ease-in-out;
+        }
+        .box5 {
+            /* all */
+            background: white;
+            transition: all 2s ease-in-out;
+        }
+        .box5:hover {
+            background: turquoise;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box box0"></div>
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box2">
+            <div class="box box3"></div>
+        </div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+</body>
+</html>

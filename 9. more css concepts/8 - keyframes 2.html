@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyF 2 %%%</title>
+    <style>
+        body {
+            background: #555;
+			width: 90vw;
+			height: 90vh;
+			margin: auto;
+			position: relative;
+        }
+
+        .box {
+            background: white;
+            width: 20vw;
+            height: 20vw;
+            position: absolute;
+			margin: 0;
+			padding: 0;
+            top: 0;
+            left: 0;
+            animation: animate1 2s forwards ease-in-out;
+            animation-iteration-count: infinite;
+            border-radius: 50% 50% 50% 50%;
+        }
+
+        @keyframes animate1 {
+            25% {
+                top: 0;
+                left: calc(99% - 20vw);
+                background: red;
+            }
+            50% {
+                top: calc(99% - 20vw);
+                left: calc(99% - 20vw);
+                background: green;
+                border-radius: 0 0 0 0;
+            }
+            75% {
+                top: calc(99% - 20vw);
+                left: 0;
+                background: blue;
+            }
+            100%{
+                top: 0;
+                left: 0;
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo Selectors : child</title>
+    <style>
+        li {
+            padding: 0.25rem;
+            margin: 0.25rem;
+            list-style: hiragana;
+        }
+
+        /* (0, 1, 1) */
+        /* first & last child */
+        li:first-child, li:last-child {
+            background: red;
+            color: black;
+        }
+
+        /* child per position */
+        li:nth-child(9)
+        {
+            background: rebeccapurple;
+        }
+
+        /* child condition 2, 5, 8, 11, 14...*/
+        li:nth-child(3n + 2)
+        {
+            background: rgb(98, 255, 50);
+        }
+
+        /* odd & even */
+        #a > li:nth-child(even)
+        {
+            background: black;
+            color: gray;
+        }
+        #a > li:nth-child(odd)
+        {
+            background: gray;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>moha number 1</li>
+        <li>moha number 2</li>
+        <li>moha number 3</li>
+        <li>moha number 4</li>
+        <li>moha number 5</li>
+        <li>moha number 6</li>
+        <li>moha number 7</li>
+        <li>moha number 8</li>
+        <li>moha number 9</li>
+        <li>moha number 10</li>
+        <li>moha number 11</li>
+        <li>moha number 12</li>
+    </ul>
+    <div>
+        <br>
+        ------------------------------------------------------------------
+        <br><br>
+    </div>
+    <ul id="a">
+        <li>jessy number 1</li>
+        <li>jessy number 2</li>
+        <li>jessy number 3</li>
+        <li>jessy number 4</li>
+        <li>jessy number 5</li>
+        <li>jessy number 6</li>
+        <li>jessy number 7</li>
+        <li>jessy number 8</li>
+        <li>jessy number 9</li>
+        <li>jessy number 10</li>
+        <li>jessy number 11</li>
+        <li>jessy number 12</li>
+    </ul>
+</body>
+</html>

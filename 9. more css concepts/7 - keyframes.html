@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyFrames</title>
+    <style>
+        body {
+            background: #333;
+            display: flex;
+            flex-direction: column;
+        }
+        .box {
+            background: whitesmoke;
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        /* animation */
+        .box {
+            /* animation name in the keyframe */
+            animation-name: animate1;
+            /* duration of one cycle */
+            animation-duration: 2s;
+            /* iteration/cycles/repreat the animation 2 | infinite */
+            animation-iteration-count: 2;
+            /* animation mode forwards (css final when the animation stops) | backwards (return to default css)| both */
+            animation-fill-mode: forwards;
+            /* delay the start of the animation */
+            animation-delay: 2s;
+            /* from to : alternate | to from : alternate reverse */
+            animation-direction: alternate;
+        }
+
+        @keyframes animate1 {
+            /* 
+            we dont need this because we set it in default
+            from {
+                width: 200px;
+            } */
+            from{
+                left: 0px;
+            }
+            to {
+                width: 600px;
+                background: black;
+                left: 900px;
+            }
+        }
+
+        .box1{
+            background: violet;
+            animation-direction: alternate-reverse;
+        }
+        .box2{
+            background: brown;
+            animation-direction: alternate;
+            /* acceleration */
+            animation-timing-function: ease-in-out;
+        }
+        .box3 {
+            background: blue;
+            /* eerything */
+            animation: animate1 5s forwards 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+</html>
