@@ -1,0 +1,16 @@
+#article .meta {
+	padding: 0.5rem;
+	background: #eee;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#article ul.list li a:hover {
+    color: var(--primary);
+}
+
+#article .meta .category {
+	/* this is only to adjust for the margin bottom we added in the category class in the home page */
+	margin-top: 0.5rem;
+}

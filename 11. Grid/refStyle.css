@@ -1,0 +1,182 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 2rem;
+	background: lightgray;
+	font-family: 'Brush Script MT', cursive;
+}
+
+header, aside, section, footer {
+	border: 2px black solid;
+	margin: 5px;
+	padding: 10px;
+}
+
+li {
+	list-style: none;
+	border: solid orangered 1px;
+	padding: 0 1rem;
+	background: lightgray;
+	font-size: 10px;
+}
+
+ul li:hover {
+	background: orangered;
+	color: white;
+	cursor: pointer;
+}
+
+/* firstTypeGrid : grid-area/grid-template-areas */
+main {
+	/* position: relative; */
+	display: grid;
+	grid-template-areas:
+		'header header header header'
+		'aside section section section'
+		'aside section section section'
+		'footer footer footer footer';
+	grid-gap: 1rem;
+}
+
+main:before {
+	content: '';
+	/* position: absolute; */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.5;
+	background: url('https://source.unsplash.com/1600x900/?hey') no-repeat center center/cover;
+	/* background: url('https://source.unsplash.com/1600x900/?hey') repeat center center/cover; */
+}
+
+header { grid-area: header; }
+aside { grid-area: aside; background: wheat; }
+section { grid-area: section; }
+footer { grid-area: footer; }
+
+/* grid:1 rows as a flex should go but max/min-content will prevent breaking lines when the hight is not enough */
+
+header {
+	/* khtouria ous2 */
+	/* position: sticky;
+	top: 0; */
+	background: wheat;
+	display: grid;
+	grid-template-columns: minmax(max-content, 3fr) repeat(2, minmax(max-content, 1fr));
+	align-items: center;
+	/* zyada khawya */
+	/* justify-content: space-around; */
+}
+
+header > ul {
+	margin: 5px;
+	display: flex;
+}
+
+/* grid:2 grid-template-rows/align-items(align element vertically) */
+aside > ul {
+	height: 100%;
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	align-items: center;
+}
+
+aside > ul > li {
+	font-size: 1.1rem;
+}
+
+section > div {
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 0.5rem;
+}
+
+section article {
+	background-color: lightgray;
+	/* margin: 0.5rem; */
+	padding: 1rem;
+}
+
+
+/* lets do this for the footer  */
+footer {
+	max-width: 80vw;
+	margin: auto;
+	background: gray;
+}
+
+footer .logo {
+	aspect-ratio: 1/1;
+}
+
+footer img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+footer > div {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	align-items: center;
+	gap: 1rem;
+	text-align: center;
+}
+
+footer > div > ul {
+	display: grid;
+	grid-template-columns: repeat(5, min-content);
+	justify-content: end;
+	gap: 1rem;
+}
+
+footer > div > ul > li:last-child {
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+
+footer .goAway {
+	grid-column: 1 / span 2;
+	border: 1px black solid;
+}
+
+@media (max-width: 790px) {
+	.socials {
+		display: none;
+	}
+	header {
+		grid-template-columns: 1fr; 
+	}
+	main {
+		grid-template-areas:
+		'header'
+		'aside'
+		'section'
+		'footer';
+	}
+}
+
+@media (max-width: 560px) {
+	body {
+		padding: 5px;
+	}
+	footer > div > ul {
+		grid-template-columns: 1fr;
+		padding: 0;
+	}
+	footer > div > ul > li {
+		margin: 0 15%;
+	}
+	footer > div > ul > li:last-child {
+		grid-column-end: 1;
+	}
+}
